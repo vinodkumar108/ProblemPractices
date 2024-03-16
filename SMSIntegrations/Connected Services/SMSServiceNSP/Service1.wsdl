@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://www.universal-sompo.ind.in/EmailService_1/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://www.universal-sompo.ind.in/EmailService_1/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://www.universal-sompo.ind.in/EmailService_1/Service1.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetMultiSMS_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMultiSMS" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMultiSMS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMultiSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEmailData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEmailData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEmailDataMultiAttach_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailDataMultiAttach" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEmailDataMultiAttach_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailDataMultiAttachResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSMSOTP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSMSOTP" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSMSOTP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSMSOTPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSMSData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSMSData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSMSData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSMSDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSMSShorten_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSMSShorten" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSMSShorten_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSMSShortenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPolicyData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPolicyData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPolicyData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPolicyDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendMailWithAttachmentFrmURL_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailWithAttachmentFrmURL" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendMailWithAttachmentFrmURL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailWithAttachmentFrmURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendMailWithMultiAttachmentFrmURL_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailWithMultiAttachmentFrmURL" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendMailWithMultiAttachmentFrmURL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailWithMultiAttachmentFrmURLResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetMultiSMS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMultiSMS" message="tns:IService1_GetMultiSMS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMultiSMSResponse" message="tns:IService1_GetMultiSMS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEmailData" message="tns:IService1_GetEmailData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEmailDataResponse" message="tns:IService1_GetEmailData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailDataMultiAttach">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEmailDataMultiAttach" message="tns:IService1_GetEmailDataMultiAttach_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEmailDataMultiAttachResponse" message="tns:IService1_GetEmailDataMultiAttach_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSOTP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSMSOTP" message="tns:IService1_GetSMSOTP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSMSOTPResponse" message="tns:IService1_GetSMSOTP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSMSData" message="tns:IService1_GetSMSData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSMSDataResponse" message="tns:IService1_GetSMSData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSShorten">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSMSShorten" message="tns:IService1_GetSMSShorten_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSMSShortenResponse" message="tns:IService1_GetSMSShorten_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPolicyData" message="tns:IService1_GetPolicyData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPolicyDataResponse" message="tns:IService1_GetPolicyData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMailWithAttachmentFrmURL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SendMailWithAttachmentFrmURL" message="tns:IService1_SendMailWithAttachmentFrmURL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SendMailWithAttachmentFrmURLResponse" message="tns:IService1_SendMailWithAttachmentFrmURL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMailWithMultiAttachmentFrmURL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SendMailWithMultiAttachmentFrmURL" message="tns:IService1_SendMailWithMultiAttachmentFrmURL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SendMailWithMultiAttachmentFrmURLResponse" message="tns:IService1_SendMailWithMultiAttachmentFrmURL_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMultiSMS">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMultiSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetEmailData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailDataMultiAttach">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetEmailDataMultiAttach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSOTP">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSMSOTP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSMSData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSShorten">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSMSShorten" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPolicyData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMailWithAttachmentFrmURL">
+      <soap:operation soapAction="http://tempuri.org/IService1/SendMailWithAttachmentFrmURL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMailWithMultiAttachmentFrmURL">
+      <soap:operation soapAction="http://tempuri.org/IService1/SendMailWithMultiAttachmentFrmURL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://ssisreprtonline.universalsompo.local/EmailService_1/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
